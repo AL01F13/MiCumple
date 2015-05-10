@@ -65,18 +65,18 @@ var nombre;
 	
 	 if (dia > 1)
 	 {
-	 $('#nombre').text('Que tal '+ nombre + ' te faltan '); 
-	 $('#dias').text(dia + ' dias para tu cumpleanos');
+	 $('#nombre').text('Que tal '+ nombre + ' faltan '); 
+	 $('#dias').text(dia + ' dias para tu cumple, ¡¡¡Feliz no cumpleaños!!! xD');
 	 }
 	 else
 	 {
-		 $('#nombre').text('Que tal '+ nombre + ' te falta '); 
-	 $('#dias').text(dia + ' dia para tu cumpleanos');
+		 $('#nombre').text('Que tal '+ nombre + ' falta (n) '); 
+	 $('#dias').text(dia + ' dia (s) para tu cumple');
 	 }
 	  
 	 if (dia < 30)
 	 { 
-	 $('#animacion').text('Felicidades!!!!! :) ');}
+	 $('#animacion').text('¡¡¡Felicidades!!! :) ');}
 	// alert(nombre);
 
      });//click en siguiente fecha

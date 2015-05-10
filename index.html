@@ -7,7 +7,7 @@
   <title>Mi Cumple</title>
 
   <!--grupo CSS-->
-  <link rel="stylesheet" href="css/Mitema.min.css" />
+  <link rel="stylesheet" href="css/huevito.min.css" />
   <link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css" />
   <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" /> 
         
@@ -24,54 +24,56 @@
 <body>
  
  <!-- Bienvenida -->
-<div data-role="page" id="page">
+<div data-role="page" id="inicio">
 	<div data-role="header">
-		<h1>Dias para mi cumple</h1>
+		<h1>Dias que faltan para la party</h1>
 	</div>
 	<div data-role="content">	
 		<h2> Bienvenido </h2>
-        <p> Esta aplicacion te servira para saber cuantos dias faltan para que sea tu cumplea y para saber cuantos años, te pedira tus datos personales	y estos seran confidenciales
+        <p> Esta aplicacion te ayudara a calcular cuantos dias faltan para que sea tu cumple y para saber tu edad, te pedira algunos datos personales pero no te preocupes estos seran confidenciales...
         <br>
         <br>
         <div align="right">
-        <a href="#page2" data-role="button" data-inline="true" data-icon="arrow-r" data-iconpos="right"> Comenzar
+        <a href="#datos" data-role="button" data-inline="true" data-icon="arrow-r" data-iconpos="right"> Comenzar
         </a>
         </div>	
 	</div>
 	<div data-role="footer">
-		<h4>@FernandaAguilar</h4>
+		<h4>@Huevito</h4>
 	</div>
 </div>
  <!-- Bienvenida -->
  
  <!-- Datos -->
-<div data-role="page" id="page2">
+<div data-role="page" id="datos">
 	<div data-role="header">
-		<h1>Nombre</h1>
+		<h1>Dime tu nombre...</h1>
 	</div>
+    
 	<div data-role="content">
-    <div style="width:450px" align="center" data-role="controlgroup" data-type="horizontal">	
-		<input type="text" name="nombre" placeholder="Pon tu nombre" width="10px" id="txtnombre">  
-        </div>
-       		<br>
-            <br>
-            <div align="center">
-            <a href="#page" data-role="button" data-inline="true" data-icon="arrow-l" data-iconpos="left"> atras
+     <div align="center">
+      <div style="width:450px"  data-role="controlgroup" data-type="horizontal">
+      <input type="text" name="nombre" placeholder="Pon tu nombre" width="10px" id="txtnombre"> 
+      </div>
+       <div align="center">
+       <a href="#inicio" data-role="button" data-inline="true" data-icon="home" data-iconpos="left"> Inicio
         </a>
-            <a href="#page3" data-role="button" data-inline="true" data-icon="arrow-r" data-iconpos="right" id="siguiente_nombre"> siguiente
+        <a href="#fecha" data-role="button" data-inline="true" data-icon="arrow-r" data-iconpos="right" id="siguiente_nombre"> Continuar
         </a>
-        </div>
+       </div>
+     </div>
 	</div>
+    
 	<div data-role="footer">
-		<h4>@FernandaAguilar</h4>
+	 <h4>@Huevito</h4>
 	</div>
 </div>
  <!-- Datos -->
  
  <!-- Fecha -->
-<div data-role="page" id="page3" data-theme="b">
+<div data-role="page" id="fecha" data-theme="b">
 	<div data-role="header">
-		<h1>Fecha</h1>
+		<h1>¿Que dia te caiste del cielo?</h1>
 	</div>
 	<div data-role="content" align="center">
     <div align="center" data-role="controlgroup" data-type="horizontal">
@@ -93,21 +95,21 @@
    	  </div>
   </div>
             <div align="center">
-            <a href="#page2" data-role="button" data-inline="true" data-icon="arrow-l" data-iconpos="left"> atras
+            <a href="#datos" data-role="button" data-inline="true" data-icon="arrow-l" data-iconpos="left"> Atras
         </a>
-            <a href="#page4" data-role="button" data-inline="true" data-icon="arrow-r" data-iconpos="right" id="siguiente_fecha" > siguiente
+            <a href="#resultado" data-role="button" data-inline="true" data-icon="arrow-r" data-iconpos="right" id="siguiente_fecha" > Continuar
         </a>
 	</div>
 	<div data-role="footer">
-		<h4>@FernandaAguilar</h4>
+		<h4>@Huevito</h4>
 	</div>
 </div>
  <!-- Fecha -->
  
   <!-- Resultado -->
- <div data-role="page" id="page4" data-add-back-btn="true">
+ <div data-role="page" id="resultado" data-add-back-btn="true">
 	<div data-role="header">
-		<h1>Dias para celebrar</h1>
+		<h1>¡¡¡Adivina!!!</h1>
 	</div>
 	<div data-role="content">	
 	  <div id="nombre" align="center" style="padding:12px" class="finales" >
@@ -125,9 +127,14 @@
         <div id="edad" style="padding:12px" align="center"class="finales" >
         
         </div>	
+        <div align="left">
+        <a href="#inicio" data-role="button" data-inline="true" data-icon="home" data-iconpos="left"> Inicio
+        </a>
+        </div>	
 	</div>
+    
 	<div data-role="footer">
-		<h4>@FernandaAguilar</h4>
+		<h4>@Huevito</h4>
 	</div>
 </div>
  <!-- Resultado -->
