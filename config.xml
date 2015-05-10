@@ -5,14 +5,14 @@
      id    = "com.phonegap.Esqueleto"  
      version  = "1.0.0">  
 	 
-   <name> Nombre </name>  
+   <name> Mi Cumple </name>  
    
    <description>  
-     Primer Ejemplo de eventos
+     Calcula cual es tu edad y cuantos dias faltan para tu proximo cumple.
    </description>  
    
    <author href="https://build.phonegap.com" email="micorreo@gmail.com">  
-       Nombre
+       Huevito
    </author>  
    
    <!-- Personaliza la aplicacion y plataforma  -->  
