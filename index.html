@@ -25,12 +25,16 @@
  
  <!-- Bienvenida -->
 <div data-role="page" id="inicio">
-	<div data-role="header">
-		<h1>Dias que faltan para la party</h1>
+	<div data-role="header" style="padding:20px">
+		<h1>Días que faltan para la party</h1>
 	</div>
-	<div data-role="content">	
-		<h2> Bienvenido </h2>
-        <p> Esta aplicacion te ayudara a calcular cuantos dias faltan para que sea tu cumple y para saber tu edad, te pedira algunos datos personales pero no te preocupes estos seran confidenciales...
+	<div data-role="content" style="padding:50px">	
+		<h2> Bienvenido (a) </h2>
+        <div align="justify">
+        <p> Esta aplicación te ayudara a calcular cuantos días faltan para que sea tu cumpleaños y para saber tu edad, te pedirá algunos datos personales pero no te preocupes estos seran confidenciales...</p>
+        
+        
+        </div>
         <br>
         <br>
         <div align="right">
@@ -38,22 +42,26 @@
         </a>
         </div>	
 	</div>
-	<div data-role="footer">
+	<div data-role="footer" style="padding:5px">
 		<h4>@Huevito</h4>
+        <h4>@Mariana Sánchez</h4>
 	</div>
 </div>
  <!-- Bienvenida -->
  
  <!-- Datos -->
 <div data-role="page" id="datos">
-	<div data-role="header">
+	<div data-role="header" style="padding:10px">
 		<h1>Dime tu nombre...</h1>
 	</div>
     
 	<div data-role="content">
      <div align="center">
       <div style="width:450px"  data-role="controlgroup" data-type="horizontal">
-      <input type="text" name="nombre" placeholder="Pon tu nombre" width="10px" id="txtnombre"> 
+      <input type="text" name="nombre" placeholder="Nombre" width="20px" id="txtnombre"> 
+      </div>
+      <div style="width:50px" align="center">
+      <img src="confi.jpg" width="100" height="200">
       </div>
        <div align="center">
        <a href="#inicio" data-role="button" data-inline="true" data-icon="home" data-iconpos="left"> Inicio
@@ -64,32 +72,33 @@
      </div>
 	</div>
     
-	<div data-role="footer">
+	<div data-role="footer" style="padding:1px">
 	 <h4>@Huevito</h4>
+     <h4>@Mariana Sánchez</h4>
 	</div>
 </div>
  <!-- Datos -->
  
  <!-- Fecha -->
 <div data-role="page" id="fecha" data-theme="b">
-	<div data-role="header">
-		<h1>¿Que dia te caiste del cielo?</h1>
+	<div data-role="header" style="padding:20px">
+		<h1>¿Qué día te caíste del cielo?</h1>
 	</div>
 	<div data-role="content" align="center">
-    <div align="center" data-role="controlgroup" data-type="horizontal">
+    <div align="center" data-role="controlgroup" data-type="horizontal" style="padding:40px">
        <div style="width:100px; float:left; padding:12px" align="center">
         Dia	
-		<input type="number" name="dia" max="31" min="1" id="diac">
+		<input type="number" name="dia" placeholder="Día" max="31" min="1" id="diac">
       DD
       </div>
       <div style="width:100px; float:left; padding:12px" align="center">
         Mes
-        <input type="number" name="mes" max="12" min="1" id="mesc">
+        <input type="number" name="mes" placeholder="Mes" max="12" min="1" id="mesc">
        MM
       </div>
        <div style="width:100px; float:left; padding:12px" align="center">
         Año
-        <input type="number"  min="1950" id="yearc">
+        <input type="number" name="year" placeholder="Año" min="1950" id="yearc">
         AA
       </div>
    	  </div>
@@ -97,34 +106,40 @@
             <div align="center">
             <a href="#datos" data-role="button" data-inline="true" data-icon="arrow-l" data-iconpos="left"> Atras
         </a>
-            <a href="#resultado" data-role="button" data-inline="true" data-icon="arrow-r" data-iconpos="right" id="siguiente_fecha" > Continuar
+            <a href="#resultado" data-role="button" data-inline="true" data-icon="arrow-r" data-iconpos="right" id="siguiente_fecha" > Calcular
         </a>
 	</div>
-	<div data-role="footer">
+	<div data-role="footer" style="padding:15px">
 		<h4>@Huevito</h4>
+        <h4>@Mariana Sánchez</h4>
 	</div>
 </div>
  <!-- Fecha -->
  
   <!-- Resultado -->
  <div data-role="page" id="resultado" data-add-back-btn="true">
-	<div data-role="header">
+	<div data-role="header" style="padding:10px">
 		<h1>¡¡¡Adivina!!!</h1>
 	</div>
 	<div data-role="content">	
-	  <div id="nombre" align="center" style="padding:12px" class="finales" >
+	  <div id="nombre" align="center" style="padding:5px" class="finales" >
       
       </div>
-      <div id="dias" align="center"style="padding:12px" class="finales" > 
+      <div id="dias" align="center"style="padding:5px" class="finales" > 
       
       </div>
-      <div id="animacion" style="padding:12px" align="center" class="finales">
+      <div id="animacion" style="padding:5px" align="center" class="finales">
       
       </div>
-       	<div id="mensaje" style="padding:12px" align="center"class="finales" >
-        
+       	<div id="mensaje" style="padding:5px" align="center"class="finales" >
+        <div style="width:150px" align="center">
+      <img src="dia-de-cumple-feliz.jpg" width="200" height="150">
+      </div>
+      <div style="width:20%" data-role="controlgroup" data-type="vertical">
+     <a href="#" id="btnvibrar" class="ui-btn">Click aquí</a>
+    </div>
         </div>
-        <div id="edad" style="padding:12px" align="center"class="finales" >
+        <div id="edad" style="padding:5px" align="center"class="finales" >
         
         </div>	
         <div align="left">
@@ -133,8 +148,9 @@
         </div>	
 	</div>
     
-	<div data-role="footer">
+	<div data-role="footer" style="padding:0px">
 		<h4>@Huevito</h4>
+        <h4>@Mariana Sánchez</h4>
 	</div>
 </div>
  <!-- Resultado -->

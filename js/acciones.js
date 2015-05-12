@@ -78,6 +78,22 @@ var nombre;
 	 { 
 	 $('#animacion').text('¡¡¡Felicidades!!! :) ');}
 	// alert(nombre);
+	
+	edad=fecha.getFullYear()-yearc;
+		if (fechaC > fechaA)
+		{
+			edad=edad-1;
+			$('#edad').text('TIENES '+ edad  + ' AÑOS HOY');
+		}
+		else
+		{
+		$('#edad').text('TIENES '+ edad  +  'AÑOS HOY');
+		}
+
+$('#btnvibrar').on('tap',function(){
+	navigator.vibrate(1000);
+
+}); //tap a btnvibrar
 
      });//click en siguiente fecha
 	 
