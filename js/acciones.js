@@ -1,100 +1,79 @@
 // JavaScript Document
-$(document).ready(function()
-{
-var nombre;	
+$(document).ready(function(e) {
+//document.addEventListener("deviceready",function(){
+	$ ('#btncomenzar') .on ('tap' , function () { 
+  navigator .vibrate (1000);
+ });//  tap a btnvibrar
+   $ ('#btninicio') .on ('tap' , function () { 
+  navigator .vibrate (1000);
+ });//  tap a btnvibrar
+	
+}); 
+//});
 
-	
-/*	var fechaH=new Date("2014/04/07");
-	alert(fechaH);
-	var fechac=new Date("2014/04/10");
-	alert(fechac);
-	resul = fechac-fechaH;
-	alert(resul);
-	dia= ((((resul/1000)/60)/60)/24);
-	
-	alert(dia);*/
-	$('#siguiente_nombre').click(function(e)
-	{
+$(document).ready(function(e) {
 	
 	
-	nombre=$('#txtnombre').val();
-	//alert(nombre);
-});//click siguinete nombre
-     $('#siguiente_fecha').click(function(e){
+	$('#btnresultado').click(function(e){
+		var diac;
+		diac=$('#txtdia').val();
+		var mesc;
+		mesc=$('#txtmes').val();
+		var anioc;
+		anioc=$('#txtyear').val();
 		
-	 var fecha=new Date();
-	
-	// alert(fecha.getDate());
-	// alert(fecha.getMonth());
-	// alert(fecha.getFullYear());
-	 var fechaA = new Date(fecha.getFullYear() + '/' + (fecha.getMonth()+1) + '/' + fecha.getDate());
-	// alert(fechaA)
-	 var diac= $('#diac').val();
-	 var mesc= $('#mesc').val();
-	 var yearc=$('#yearc').val();
-	 fechaC = new Date(fecha.getFullYear() + '/' + mesc + '/' + diac);
-	 if (fechaC < fechaA)
-	 {	
-	fechaC =new Date((fecha.getFullYear() + 1) + '/' + mesc + '/' + diac);
-	//alert(fechaC)
-	
-	 }
-	 
-	 resul= fechaC-fechaA;
-	 //alert(resul);
-	 dia=Math.ceil((((resul/1000)/60)/60)/24);
-	// alert(dia);
-	edad= fecha.getFullYear() - yearc;
-	//alert(edad);
-	if ((fecha.getMonth()+1)< mesc)
-	{
-		edad=edad-1;
-	}
-	else
-	{
-		if ((fecha.getMonth()+1)== mesc)
+		var fecha_actual = new Date ();
+		//alert (fecha_actual);
+		var fecha_proximo = new Date (fecha_actual.getFullYear(),mesc -1 ,diac);
+		//alert (fecha_proximo);
+		var fecha_actual = new Date (fecha_actual.getFullYear(), fecha_actual.getMonth(), fecha_actual.getDate());
+		//alert (fecha_actual);
+		var fecha_nacimiento = new Date (anioc,mesc-1,diac);
+		//alert (fecha_nacimiento);
+		var edad=fecha_actual.getFullYear()-anioc;
+		
+		if (fecha_proximo <= fecha_actual)
 		{
-			if (diac>fecha.getDate())
-			{
-				edad= edad-1;
-			}
-			}
-	}
-	
-	//alert(edad);
-	
-	 if (dia > 1)
-	 {
-	 $('#nombre').text('Que tal '+ nombre + ' faltan '); 
-	 $('#dias').text(dia + ' dias para tu cumple, ¡¡¡Feliz no cumpleaños!!! xD');
-	 }
-	 else
-	 {
-		 $('#nombre').text('Que tal '+ nombre + ' falta (n) '); 
-	 $('#dias').text(dia + ' dia (s) para tu cumple');
-	 }
-	  
-	 if (dia < 30)
-	 { 
-	 $('#animacion').text('¡¡¡Felicidades!!! :) ');}
-	// alert(nombre);
-	
-	edad=fecha.getFullYear()-yearc;
-		if (fechaC > fechaA)
-		{
-			edad=edad-1;
-			$('#edad').text('TIENES '+ edad  + ' AÑOS HOY');
+			fecha_proximo = new Date (fecha_proximo.getFullYear()+1,fecha_proximo.getMonth(),fecha_proximo.getDate());
+			
 		}
 		else
 		{
-		$('#edad').text('TIENES '+ edad  +  'AÑOS HOY');
+			edad=edad-1
 		}
-
-$('#btnvibrar').on('tap',function(){
-	navigator.vibrate(1000);
-
-}); //tap a btnvibrar
-
-     });//click en siguiente fecha
+		var dias_faltantes = (fecha_proximo - fecha_actual)/1000/60/60/24;
+		
+		dias_faltantes = Math.round(dias_faltantes);
+		
+		
+		$('#divdias').text( $('#txtnombre').val() + ' Faltan ' + dias_faltantes + ' día(s) para festejar tu cumpleaños'); 
+		
+		 $('#divedad').text('Tienes '+ edad  +  ' años');
+		 
+		if (dias_faltantes <7)
+		{
+				
+	       $('#divfelicidades').show();
+		}
+		else
+		{
+			
+		    $('#divfelicidades').hide();
+		}
+		
+});
+      
 	 
-});//ready
+	 $('#btninicio').click(function(e){
+		$('#txtnombre').val('')
+		$('#txtdia').val('')
+		$('#txtmes').val('')
+		$('#txtyear').val('')
+		
+		
+	});
+
+
+
+	});//ready
+
